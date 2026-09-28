@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Cloud Based College Club Management System
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        🎓 College Club Management
+    </div>
+
+    <div class="nav-buttons">
+
+        <button onclick="showPage('dashboard')">
+            Dashboard
+        </button>
+
+        <button onclick="showPage('clubs')">
+            Clubs
+        </button>
+
+        <button onclick="showPage('members')">
+            Members
+        </button>
+
+        <button onclick="showPage('events')">
+            Events
+        </button>
+
+        <button onclick="showPage('registrations')">
+            Registrations
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboard" class="page">
+
+    <div class="hero">
+
+        <h1>
+            Cloud-Based College Club Management System
+        </h1>
+
+        <p>
+            Manage college clubs, student members,
+            events and registrations in one place.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">
+                🏫
+            </div>
+
+            <h2 id="clubCount">
+                0
+            </h2>
+
+            <p>
+                Total Clubs
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                👨‍🎓
+            </div>
+
+            <h2 id="memberCount">
+                0
+            </h2>
+
+            <p>
+                Total Members
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                📅
+            </div>
+
+            <h2 id="eventCount">
+                0
+            </h2>
+
+            <p>
+                Total Events
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🎟️
+            </div>
+
+            <h2 id="registrationCount">
+                0
+            </h2>
+
+            <p>
+                Registrations
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-section">
+
+        <h2>
+            About the System
+        </h2>
+
+        <p>
+            This cloud-based system helps colleges manage
+            clubs, students, club activities and event
+            registrations digitally.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CLUBS ================= -->
+
+<section id="clubs" class="page hidden">
+
+    <h1>
+        🏫 College Clubs
+    </h1>
+
+
+    <div class="form-box">
+
+        <h2>
+            Add New Club
+        </h2>
+
+
+        <label>
+            Club Name
+        </label>
+
+        <input
+            type="text"
+            id="clubName"
+            placeholder="Enter club name"
+        >
+
+
+        <label>
+            Category
+        </label>
+
+        <input
+            type="text"
+            id="clubCategory"
+            placeholder="Technical / Cultural / Sports"
+        >
+
+
+        <label>
+            Coordinator
+        </label>
+
+        <input
+            type="text"
+            id="clubCoordinator"
+            placeholder="Coordinator name"
+        >
+
+
+        <label>
+            Description
+        </label>
+
+        <textarea
+            id="clubDescription"
+            placeholder="Enter club description">
+        </textarea>
+
+
+        <button
+            class="primary-btn"
+            onclick="addClub()">
+
+            Add Club
+
+        </button>
+
+    </div>
+
+
+    <div id="clubList">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MEMBERS ================= -->
+
+<section id="members" class="page hidden">
+
+    <h1>
+        👨‍🎓 Student Members
+    </h1>
+
+
+    <div class="form-box">
+
+        <h2>
+            Register Member
+        </h2>
+
+
+        <label>
+            Student Name
+        </label>
+
+        <input
+            type="text"
+            id="memberName"
+            placeholder="Enter student name"
+        >
+
+
+        <label>
+            Register Number
+        </label>
+
+        <input
+            type="text"
+            id="registerNumber"
+            placeholder="Enter register number"
+        >
+
+
+        <label>
+            Department
+        </label>
+
+        <input
+            type="text"
+            id="department"
+            placeholder="Example: CSE"
+        >
+
+
+        <label>
+            Email
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter email"
+        >
+
+
+        <label>
+            Select Club
+        </label>
+
+        <select id="memberClub">
+
+            <option value="">
+                Select Club
+            </option>
+
+        </select>
+
+
+        <button
+            class="primary-btn"
+            onclick="addMember()">
+
+            Register Member
+
+        </button>
+
+    </div>
+
+
+    <div id="memberList">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EVENTS ================= -->
+
+<section id="events" class="page hidden">
+
+    <h1>
+        📅 Club Events
+    </h1>
+
+
+    <div class="form-box">
+
+        <h2>
+            Create Event
+        </h2>
+
+
+        <label>
+            Event Name
+        </label>
+
+        <input
+            type="text"
+            id="eventName"
+            placeholder="Enter event name"
+        >
+
+
+        <label>
+            Event Date
+        </label>
+
+        <input
+            type="date"
+            id="eventDate"
+        >
+
+
+        <label>
+            Venue
+        </label>
+
+        <input
+            type="text"
+            id="eventVenue"
+            placeholder="Enter venue"
+        >
+
+
+        <label>
+            Select Club
+        </label>
+
+        <select id="eventClub">
+
+            <option value="">
+                Select Club
+            </option>
+
+        </select>
+
+
+        <label>
+            Description
+        </label>
+
+        <textarea
+            id="eventDescription"
+            placeholder="Enter event description">
+        </textarea>
+
+
+        <button
+            class="primary-btn"
+            onclick="addEvent()">
+
+            Create Event
+
+        </button>
+
+    </div>
+
+
+    <div id="eventList">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= REGISTRATIONS ================= -->
+
+<section id="registrations" class="page hidden">
+
+    <h1>
+        🎟️ Event Registrations
+    </h1>
+
+
+    <div class="form-box">
+
+        <h2>
+            Register for Event
+        </h2>
+
+
+        <label>
+            Student Name
+        </label>
+
+        <input
+            type="text"
+            id="registrationName"
+            placeholder="Enter student name"
+        >
+
+
+        <label>
+            Register Number
+        </label>
+
+        <input
+            type="text"
+            id="registrationNumber"
+            placeholder="Enter register number"
+        >
+
+
+        <label>
+            Select Event
+        </label>
+
+        <select id="registrationEvent">
+
+            <option value="">
+                Select Event
+            </option>
+
+        </select>
+
+
+        <button
+            class="primary-btn"
+            onclick="registerEvent()">
+
+            Register
+
+        </button>
+
+    </div>
+
+
+    <div id="registrationList">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        🎓 Cloud-Based College Club Management System
+    </h3>
+
+    <p>
+        College Project | Firebase Realtime Database
+    </p>
+
+</footer>
+
+
+
+<!-- IMPORTANT:
+     Firebase requires module -->
+<script type="module" src="script.js"></script>
+
+
+</body>
+
+</html>

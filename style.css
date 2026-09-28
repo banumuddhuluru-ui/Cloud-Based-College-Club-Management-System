@@ -1,0 +1,506 @@
+/* ================= GENERAL ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f6f9;
+
+    color: #222;
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+
+    background: #1e293b;
+
+    color: white;
+
+    padding: 18px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+
+.nav-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+}
+
+
+.nav-buttons button {
+
+    background: transparent;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 14px;
+
+    margin: 3px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.nav-buttons button:hover {
+
+    background: #334155;
+
+    border-radius: 6px;
+
+}
+
+
+/* ================= PAGE ================= */
+
+.page {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    min-height: 70vh;
+
+    margin: 30px auto;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    background: white;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.hero h1 {
+
+    margin-top: 0;
+
+    font-size: 32px;
+
+}
+
+
+.hero p {
+
+    font-size: 17px;
+
+    color: #666;
+
+}
+
+
+/* ================= DASHBOARD CARDS ================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+
+.card-icon {
+
+    font-size: 35px;
+
+}
+
+
+.card h2 {
+
+    font-size: 35px;
+
+    margin: 10px 0 5px;
+
+}
+
+
+.card p {
+
+    color: #666;
+
+}
+
+
+/* ================= INFO ================= */
+
+.info-section {
+
+    background: white;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+
+/* ================= FORMS ================= */
+
+.form-box {
+
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+
+.form-box h2 {
+
+    margin-top: 0;
+
+}
+
+
+label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 6px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+
+}
+
+
+/* ================= BUTTON ================= */
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+.primary-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+}
+
+
+.primary-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+/* ================= ITEMS ================= */
+
+.item {
+
+    background: white;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.08);
+
+}
+
+
+.item h2 {
+
+    margin-top: 0;
+
+}
+
+
+.item p {
+
+    line-height: 1.5;
+
+}
+
+
+.delete {
+
+    background: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 6px;
+
+}
+
+
+.delete:hover {
+
+    background: #b91c1c;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #1e293b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+
+}
+
+
+footer h3 {
+
+    margin: 0 0 8px;
+
+}
+
+
+footer p {
+
+    margin: 0;
+
+    color: #cbd5e1;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+
+        display: block;
+
+        text-align: center;
+
+    }
+
+
+    .logo {
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .nav-buttons {
+
+        display: block;
+
+    }
+
+
+    .nav-buttons button {
+
+        display: inline-block;
+
+    }
+
+
+    .page {
+
+        width: 94%;
+
+    }
+
+
+    .hero {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .card {
+
+        padding: 18px 10px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 28px;
+
+    }
+
+}
